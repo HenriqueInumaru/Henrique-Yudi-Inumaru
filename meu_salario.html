@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var mes = prompt("Digite o Mês que deseja saber!");
+
+	mostra("Mês de " + mes);
+
+	var diasTrabalhados = parseInt(prompt("Quantos dias de hirukin você trabalhou"));
+	var noitesTrabalhadas = parseInt(prompt("Quantos dias de yakin você trabalhou?"));
+	var horasExtras = parseInt(prompt("Quantas horas extras você fez?"));
+
+	var horasNormais = 1600;
+	var horaAdicional = 2000;
+
+	var salarioDia = (horasNormais * 7.834);
+	var salarioNoite = ((horasNormais * 2) + (horaAdicional * 5.834));
+	var zangyo = (horaAdicional * horasExtras);
+
+	var salario = parseInt((salarioDia * diasTrabalhados) + (salarioNoite * noitesTrabalhadas) + (zangyo));
+
+	mostra ("Seu salário por enquanto é de " + salario + " ienes, vamos fazer mais ZANGYOU!")
+
+
+
+</script>
